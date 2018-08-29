@@ -1,0 +1,14 @@
+<div class="container">
+    <h4>Top GitHub Users List</h4>
+
+    <mat-card *ngFor="let item of users" class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{ item.login| uppercase }}</mat-card-title>
+              <mat-card-subtitle>{{item.type}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src={{item.avatar_url}} class="user-img">
+            <mat-card-content>
+                <span>URL: {{item.url}}</span>
+            </mat-card-content>
+          </mat-card>
+</div>
